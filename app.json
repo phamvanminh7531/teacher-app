@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "TeacherApp",
+    "slug": "TeacherApp",
+    "version": "1.0.0",
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone"
+        }
+      ]
+    ]
+  },
+  "name": "TeacherApp"
+}
