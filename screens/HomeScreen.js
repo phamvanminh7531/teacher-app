@@ -84,9 +84,14 @@ export default function HomeScreen({ navigation }) {
     signCertificate(data);
   };
 
+  const axiosInstance = axios.create({
+    baseURL: API_BASE_URL,
+    timeout: 60000, // Increase timeout to 60 seconds
+  });
+
   const signCertificate = async (certId) => {
     try {
-      const response = await axios.post(`${API_BASE_URL}/sign-cert/${certId}`, 
+      const response = await axiosInstance.post(`${API_BASE_URL}/sign-cert/${certId}`, 
       { 
         privateKey: privateKey 
       }, 
